@@ -5,21 +5,21 @@
 class Gasworks < Formula
   desc "SSO login + getToken (EIA) CLI for Gas City"
   homepage "https://github.com/gascity/gasworks"
-  version "0.1.1"
+  version "0.1.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/gascity/gasworks/releases/download/v0.1.1/gasworks_0.1.1_darwin_amd64.tar.gz"
-      sha256 "612bf7500571d7acf26b7b41468cdad6a82e6b39049fe534c6f47dd1ca04c8e4"
+      url "https://github.com/gascity/gasworks/releases/download/v0.1.2/gasworks_0.1.2_darwin_amd64.tar.gz"
+      sha256 "2ba775b01fdfbb935dabcbdb65ae58e0951f48a8d777fb6e19a77caf32443a84"
 
       define_method(:install) do
         bin.install "gasworks"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/gascity/gasworks/releases/download/v0.1.1/gasworks_0.1.1_darwin_arm64.tar.gz"
-      sha256 "19da9f4cf188965abaeb3e721e788ceca058214f41399f62c9cef987a2215ca1"
+      url "https://github.com/gascity/gasworks/releases/download/v0.1.2/gasworks_0.1.2_darwin_arm64.tar.gz"
+      sha256 "4d0dedac98945b91c83359bb018969a08ce3bc7f8c748929860de23f7fe604ee"
 
       define_method(:install) do
         bin.install "gasworks"
@@ -29,15 +29,15 @@ class Gasworks < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/gascity/gasworks/releases/download/v0.1.1/gasworks_0.1.1_linux_amd64.tar.gz"
-      sha256 "101506c55c8df6952c91b4788ca998075e3310fc9d32a7ea972b6c459800a0d6"
+      url "https://github.com/gascity/gasworks/releases/download/v0.1.2/gasworks_0.1.2_linux_amd64.tar.gz"
+      sha256 "96082ec2fa6806ee9773cd499c0e8f869b1bdf1e88ae5640d1eaa0e318264f23"
       define_method(:install) do
         bin.install "gasworks"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/gascity/gasworks/releases/download/v0.1.1/gasworks_0.1.1_linux_arm64.tar.gz"
-      sha256 "1183c4027798a4713c6e81e0d98b787e5b59e89bfb990ec74ab8a6cb41b358c7"
+      url "https://github.com/gascity/gasworks/releases/download/v0.1.2/gasworks_0.1.2_linux_arm64.tar.gz"
+      sha256 "a8747d36f5a5644e3eb3323baea8ce38f23adefa3c7df8c3ff97f8a39f018dd2"
       define_method(:install) do
         bin.install "gasworks"
       end
